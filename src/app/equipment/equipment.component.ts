@@ -31,7 +31,7 @@ export class EquipmentComponent implements OnInit {
    // Code your addItem function here:
    addItem(equipment: object): boolean {
      this.cargoHold.push(equipment);
-     this.cargoMass = this.cargoMass + equipment.mass;
+     this.cargoMass = this.cargoMass + equipment['mass'];
      if (this.cargoMass + 200 > this.maximumAllowedMass) {
        return true;
      } else {
